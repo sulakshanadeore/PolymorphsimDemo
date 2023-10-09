@@ -1,0 +1,93 @@
+Polymorphism
+Inheritance with abstract classes.
+Delegates
+----------------------
+
+internal:The member can be accessed only in the same namespace/assembly.
+protected:only accessed in the same class or derived class.
+protected internal: the member can be accessed in the same namespace/assembly and 
+derived class in the different assembly/namespace.
+-----------------------------------------
+
+
+Interface and Abstract Class
+1) Interface is a contract, it can be implemented differently by all the derived members.
+2)Interface cannot have code/implementations only declarations allowed.
+3) interface members cannot have access specifiers.
+4)Interfaces are used for dependency injection.
+interface IOperations
+{
+void Add();
+void Edit();
+void Delete();
+void Update()
+}
+class Employee:IOperations
+{
+//Adding Employee
+void Add(){}
+//Editing Employee
+void Edit(){}
+//Deleting Employee
+void Delete(){
+}
+
+//Updating Employee
+void Update(){}
+}
+
+
+class Dept:IOperations
+{
+
+void Add(){
+//Adding Dept
+}
+void Edit(){
+//Edting Dept
+}
+void Delete(){
+//Deleting Dept
+}
+void Update(){
+//Updating
+
+}
+
+}
+
+//dependency
+<IOperations io ,Dept d>
+//io.DeptMethods
+io.Add
+io.Edit
+
+<IOperations ie ,Employee e>
+ie.EmployeeOperations
+
+Abstract Class
+**************
+Concrete Methods(//have code with them)
+as well as
+Non Concrete Methods(//donot have code  and so they should be marked abstract methods/members)
+
+1) access specifier public required
+2) to have abstract members class must be abstract
+3)each abstract class, must have atleast one abstract method.
+--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
